@@ -1,6 +1,5 @@
  
 #Code Book for sensor_data_aggregated.txt 
-----------------------------------------------------------------
 
 ## File Format
  - File format: Text data, columns separated by space
@@ -33,12 +32,11 @@ This document describes how the source data was transformed and the structure of
  1. The information related to subjects, activities and feature measurements that was provided in separate text files was joined together to form one dataset for test and one dataset for train data
  2. Train and test data were appended together to form a single dataset
  3. Out of the 561 features provided with the data, only the 66 that represent a mean or a standard deviation were retained 
-<br>4. The activity id was replaced by activity description provided with the project (activity_labels.txt )
-<br>5. Columns were labeled based on the provided information (features.txt)
-<br>6. The data was aggregated on the activity and subject_id level. The data includes 6 different activity data for 30 different subjects, which gives a total of 180 rows in the aggregated dataset. All the included feature variables were averaged within each of the groups.
+ 4. The activity id was replaced by activity description provided with the project (activity_labels.txt )
+ 5. Columns were labeled based on the provided information (features.txt)
+ 6. The data was aggregated on the activity and subject_id level. The data includes 6 different activity data for 30 different subjects, which gives a total of 180 rows in the aggregated dataset. All the included feature variables were averaged within each of the groups.
 	 
 ## Included Variable Reference
-----------------------------
 ``` 
 [1] activity_desc - text description of the activity. 
   - Possible values are 
@@ -123,7 +121,6 @@ This document describes how the source data was transformed and the structure of
 ```
 
 ##Feature Selection 
-----------------------------
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
