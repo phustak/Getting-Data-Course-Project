@@ -30,9 +30,9 @@
 This document describes how the source data was transformed and the structure of the final dataset. 
   
  The data available through the project was processed using the following steps ...
-<br>1. The information related to subjects, activities and feature measurements that was provided in separate text files was joined together to form one dataset for test and one dataset for train data
-<br>2. Train and test data were appended together to form a single dataset
-<br>3. Out of the 561 features provided with the data, only the 66 that represent a mean or a standard deviation were retained 
+ 1. The information related to subjects, activities and feature measurements that was provided in separate text files was joined together to form one dataset for test and one dataset for train data
+ 2. Train and test data were appended together to form a single dataset
+ 3. Out of the 561 features provided with the data, only the 66 that represent a mean or a standard deviation were retained 
 <br>4. The activity id was replaced by activity description provided with the project (activity_labels.txt )
 <br>5. Columns were labeled based on the provided information (features.txt)
 <br>6. The data was aggregated on the activity and subject_id level. The data includes 6 different activity data for 30 different subjects, which gives a total of 180 rows in the aggregated dataset. All the included feature variables were averaged within each of the groups.
