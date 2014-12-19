@@ -2,12 +2,13 @@
 #Code Book for sensor_data_aggregated.txt 
 ----------------------------------------------------------------
 
+## File Format
  - File format: Text data, columns separated by space
  - Header row: Included
  - Total data rows: 180
  - Total columns: 68
 
- 
+## Source Data 
  The dataset is based on the data collected and provided through the Human 
  Activity Recognition Using Smartphones project ...
  
@@ -21,22 +22,22 @@
  description of the experiments, the raw data collected, the calculated features
  and the units for both the raw data and the features. All this information is 
  included in the source_docs folder...
-   - README.txt 
-   - features.txt 
-   - features_info.txt 
+ - README.txt 
+ - features.txt 
+ - features_info.txt 
 
-  This document describes how the source data was transformed and also 
-   the structure of the final dataset. 
+## Data Processing  
+This document describes how the source data was transformed and the structure of the final dataset. 
   
  The data available through the project was processed using the following steps ...
-1. The information related to subjects, activities and feature measurements that was provided in separate text files was joined together to form one dataset for test and one dataset for train data
-2. Train and test data were appended together to form a single dataset
-3. Out of the 561 features provided with the data, only the 66 that represent a mean or a standard deviation were retained 
-4. The activity id was replaced by activity description provided with the project (activity_labels.txt )
-5. Columns were labeled based on the provided information (features.txt)
-6. The data was aggregated on the activity and subject_id level. The data includes 6 different activity data for 30 different subjects, which gives a total of 180 rows in the aggregated dataset. All the included feature variables were averaged within each of the groups.
+<br>1. The information related to subjects, activities and feature measurements that was provided in separate text files was joined together to form one dataset for test and one dataset for train data
+<br>2. Train and test data were appended together to form a single dataset
+<br>3. Out of the 561 features provided with the data, only the 66 that represent a mean or a standard deviation were retained 
+<br>4. The activity id was replaced by activity description provided with the project (activity_labels.txt )
+<br>5. Columns were labeled based on the provided information (features.txt)
+<br>6. The data was aggregated on the activity and subject_id level. The data includes 6 different activity data for 30 different subjects, which gives a total of 180 rows in the aggregated dataset. All the included feature variables were averaged within each of the groups.
 	 
-##Included Variable Reference
+## Included Variable Reference
 ----------------------------
 ``` 
 [1] activity_desc - text description of the activity. 
@@ -48,9 +49,12 @@
 	  "STANDING"
 	  "LAYING"
 
-[2] subject_id - Sequential ID number of the subject of the experiment. Values are integers between 1 and 30
+[2] subject_id - Sequential ID number of the subject of the experiment. 
+                 Values are integers between 1 and 30
 
-[3] tBodyAcc.mean.X  - mean of the provided feature variable. Please see the Feature Selection section below for description of all features as provided with the source data.
+[3] tBodyAcc.mean.X  - mean of the provided feature variable. 
+                     Please see the Feature Selection section below 
+					 for description of all features as provided with the source data.
 [4] tBodyAcc.mean.Y  -- || --
 [5] tBodyAcc.mean.Z  -- || -- 
 [6] tBodyAcc.std.X   -- || --
@@ -150,5 +154,5 @@ fBodyGyroJerkMag
 ```
 The set of variables that were estimated from these signals are: 
 
--mean(): Mean value
--std(): Standard deviation
+ - mean(): Mean value
+ - std(): Standard deviation
